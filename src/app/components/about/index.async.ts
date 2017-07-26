@@ -1,5 +1,4 @@
 import {Component, OnInit} from '@angular/core';
-import {NGReact} from './components/ng-react';
 
 @Component({
     selector: 'about',
@@ -17,6 +16,5 @@ export class About implements OnInit {
     }
 
     ngOnInit() {
-        NGReact.initialize('Hello From React!');
     }
 }
