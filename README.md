@@ -1,5 +1,5 @@
 # ce-site-v-3
-
+Starting CE Site Version 3
 
 ## Usage
 You have access to the following sub generators:
@@ -15,7 +15,7 @@ For a complete list of available commands and to add tab auto-completion, run th
     $ npm completion >> ~/.bashrc
     $ source ~/.bashrc
     $ npm run <tab><tab>
-    
+
 which will produce the following output    
 ```
 
@@ -24,10 +24,10 @@ ci                e2e               new-interface     start             webdrive
 clean             e2e-live          new-pipe          test              
 clean-install     lint              new-service       test-watch        
 clean-start       new-component     postinstall       watch      
- 
+
 ```
 
-This workflow serves as a starting point for building component based Angular 2.0 applications using Webpack. 
+This workflow serves as a starting point for building component based Angular 2.0 applications using Webpack.
 
 * Heavily commented webpack configuration with reasonable defaults.
 * ES6, and ES7 support with babel.
@@ -80,9 +80,9 @@ go to [http://localhost:2368](http://localhost:2368) in your browser.
 │   │   └── home/                   * example main page level component
 │   │       ├── e2e.js              * end-to-end test for home
 │   │       ├── index.ts            * a simple synchronous component
-│   │       ├── spec.ts             * 
-│   │       ├── style.scss          * 
-│   │       └── template.html       * 
+│   │       ├── spec.ts             *
+│   │       ├── style.scss          *
+│   │       └── template.html       *
 │   ├── e2e.js                      * end-to-end test for the app component
 │   ├── index.ts                    * the app component
 │   ├── root.spec.ts                * the main entry point for hierarchically nested tests.
@@ -98,7 +98,7 @@ go to [http://localhost:2368](http://localhost:2368) in your browser.
 │   └── index.html                  * the html index page where it all starts
 ├── shims/                          * shims an polyfills for non-compliant browsers
 │   └── shims_for_IE.js             * sample shim
-├── style/                          * 
+├── style/                          *
 │   └── app.scss                    * styles required by the index page
 └── vendor.ts                       * this is where we import shims/polyfills and core third party libraries
 ```
