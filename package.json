@@ -99,7 +99,6 @@
         "ts-helpers": "^1.1.1",
         "typedoc": "^0.3.12",
         "typescript": "^1.8.10",
-        "typings": "^0.8.1",
         "url-loader": "^0.5.7",
         "webpack": "^1.13.0",
         "webpack-dev-server": "^1.14.1",
