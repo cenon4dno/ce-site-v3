@@ -1,0 +1,6 @@
+{
+  "generator-ng2-webpack": {
+    "appname": "ce-site-v-3",
+    "clientFolder": "src"
+  }
+}
