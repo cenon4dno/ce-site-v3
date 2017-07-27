@@ -1,4 +1,6 @@
-// styles applied on :host are applied on the current component, "app" in this case
+// Get variables
+@import "./src/style/_variables";
+
 :host {
   display: flex;
   flex-direction:column;
@@ -21,6 +23,7 @@ main {
   text-align: center;
   margin-top: 50px;
   flex: 1 0 auto;
+  background: $white;
 }
 
 footer {
