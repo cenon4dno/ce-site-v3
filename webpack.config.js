@@ -201,7 +201,13 @@ module.exports = (function makeWebpackConfig() {
             template: './src/public/index.html',
             inject: 'body',
             title: 'App - ' + target
-        })
+        }),
+
+        new webpack.ProvidePlugin({
+           jQuery: 'jquery',
+           $: 'jquery',
+           jquery: 'jquery'
+       })
     ];
 
     if (!isTestEnv) {
