@@ -5,7 +5,7 @@ import {FORM_PROVIDERS} from '@angular/common';
 
 import '../style/app.scss';
 
-import {Api} from './services/api';         // ./services/api/index.ts
+import {i18n} from './services/i18n';         // ./services/api/index.ts
 import routes from './routes';
 
 /*
@@ -14,7 +14,7 @@ import routes from './routes';
  */
 @Component({
     selector: 'app', // <app></app>
-    providers: [...FORM_PROVIDERS, Api],
+    providers: [...FORM_PROVIDERS, i18n],
     directives: [...ROUTER_DIRECTIVES],
     pipes: [],
     styles: [require('./style.scss')],
@@ -25,7 +25,13 @@ import routes from './routes';
 
 export class App {
     url: string = '//cenonebora.com';
+    lang: object = {};
 
-    constructor(public api: Api) {
+    constructor(public i18n: i18n) {
+        i18n.geti18nFile()
+            .then((data) => {
+                console.log('language', data);
+                this.lang = data;
+            });
     }
 }
