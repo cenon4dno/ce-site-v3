@@ -2,6 +2,9 @@
   "name": "app",
   "version": "0.0.1",
   "license": "MIT",
+  "config": {
+    "env": "if-env NODE_ENV=prod ?? npm run start:prod || npm run start:dev"
+  },
   "scripts": {
     "build": "rimraf dist && webpack --progress --profile --colors --display-error-details --display-cached --optimize-occurence-order --optimize-minimize --optimize-dedupe",
     "ci": "npm run e2e && npm run test",
@@ -28,7 +31,9 @@
     "predocker-server": "npm install --quiet",
     "predocker-start": "docker pull cmelion/generator-ng2-webpack:latest",
     "server": "json-server --watch json-server/db.json",
-    "start": "concurrently \"npm run server\" \"npm run client\"",
+    "env-config": "json-server --watch json-server/env/config.json --port 3002",
+    "server-prod": "json-server --watch json-server/db.json --port 3001",
+    "start": "concurrently \"npm run server\" \"npm run env-config\" \"npm run client\"",
     "test": "karma start",
     "test-watch": "karma start --no-single-run --auto-watch",
     "watch": "webpack --watch --progress --profile",
