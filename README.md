@@ -21,7 +21,7 @@ which will produce the following output
 
 build             docs              new-directive     server            webdriver-start
 ci                e2e               new-interface     start             webdriver-update
-clean             e2e-live          new-pipe          test              
+clean             e2e-live          new-pipe          test              env-config
 clean-install     lint              new-service       test-watch        
 clean-start       new-component     postinstall       watch      
 
@@ -131,3 +131,8 @@ It will start a local server using `webpack-dev-server` which will watch, build 
 
 * single run: `npm test`
 * live mode (TDD style): `npm run test-watch`
+
+
+## Release Process
+ * https://github.com/cenon4dno/ce-site-v3/releases cut a release
+ * On server execute command `git checkout tags/x.x.x` or `git checkout x.x.x`
