@@ -2,8 +2,8 @@ import {Component, OnInit} from '@angular/core';
 
 @Component({
     selector: 'about',
-    template: require('./template.html'),
-    styles: [require('./style.scss')],
+    template: require('./about.template.html'),
+    styles: [require('./about.style.scss')],
     providers: [],
     directives: [],
     pipes: []

@@ -15,7 +15,7 @@ import {MockBackend} from '@angular/http/testing';
 import {provide} from "@angular/core";
 
 // Load the implementations that should be tested
-import {App} from './index';
+import {App} from './app';
 
 describe('App', () => {
   // provide our implementations or mocks to the dependency injector

@@ -6,7 +6,7 @@ import {FORM_PROVIDERS} from '@angular/common';
 import '../style/app.scss';
 
 import {i18n} from './services/i18n';         // ./services/api/index.ts
-import routes from './routes';
+import routes from './app.routes';
 
 /*
  * App Component
@@ -17,8 +17,8 @@ import routes from './routes';
     providers: [...FORM_PROVIDERS, i18n],
     directives: [...ROUTER_DIRECTIVES],
     pipes: [],
-    styles: [require('./style.scss')],
-    template: require('./template.html')
+    styles: [require('./app.style.scss')],
+    template: require('./app.template.html')
 })
 
 @RouteConfig(routes)

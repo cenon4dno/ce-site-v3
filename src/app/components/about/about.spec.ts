@@ -8,7 +8,7 @@ import {
 import {Component, provide} from '@angular/core';
 
 // Load the implementations that should be tested
-import {About} from './index.async';
+import {About} from './about';
 
 describe('About', () => {
     beforeAll(() => {

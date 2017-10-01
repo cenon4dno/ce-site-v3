@@ -8,7 +8,7 @@ import {
 } from '@angular/core/testing';
 
 // Load the implementations that should be tested
-import {Home} from './index';
+import {Home} from './home';
 
 // Use the assert helper to get a reference to the component, element and fixture
 import {Assert} from './../../../assert';
