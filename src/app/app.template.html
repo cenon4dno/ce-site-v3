@@ -5,7 +5,7 @@
   </nav>
 </header>
 <main>
-  <router-outlet></router-outlet>
+  <router-outlet *ngIf="lang.contents"></router-outlet>
 </main>
 <footer>
   <a href="{{ url }}">Webpack Angular 2 Starter</a>

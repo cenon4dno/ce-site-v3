@@ -1,12 +1,11 @@
 /// src/app/index.ts
-import {Component} from '@angular/core';
-import {RouteConfig, ROUTER_DIRECTIVES} from '@angular/router-deprecated';
+import {Component, OnInit} from '@angular/core';
+import {RouteConfig, ROUTER_PROVIDERS, ROUTER_DIRECTIVES} from '@angular/router-deprecated';
 import {FORM_PROVIDERS} from '@angular/common';
-
-import '../style/app.scss';
-
-import {i18n} from './services/i18n';         // ./services/api/index.ts
+import {i18n} from './services/i18n/i18n';
+import {configuration} from './services/configuration/configuration'; 
 import routes from './app.routes';
+import '../style/app.scss';
 
 /*
  * App Component
@@ -14,7 +13,7 @@ import routes from './app.routes';
  */
 @Component({
     selector: 'app', // <app></app>
-    providers: [...FORM_PROVIDERS, i18n],
+    providers: [...FORM_PROVIDERS, i18n, configuration],
     directives: [...ROUTER_DIRECTIVES],
     pipes: [],
     styles: [require('./app.style.scss')],
@@ -24,14 +23,16 @@ import routes from './app.routes';
 @RouteConfig(routes)
 
 export class App {
-    url: string = '//cenonebora.com';
-    lang: object = {};
+    public lang: object = {};
 
-    constructor(public i18n: i18n) {
-        i18n.geti18nFile()
-            .then((data) => {
-                console.log('language', data);
-                this.lang = data;
+    constructor(public i18n: i18n, private configuration: configuration) {
+        this.configuration.getConfig()
+            .then((conf) => {
+                console.log('configuration', conf);
+            });
+        this.i18n.geti18nFile()
+            .then((lang) => {
+                this.lang = lang;
             });
     }
 }

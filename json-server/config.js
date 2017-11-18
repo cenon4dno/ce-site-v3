@@ -11,7 +11,7 @@ module.exports = {
     },
     "dev": {
         "config": {
-            "api": "http://v3.cenonebora.com"
+            "api": "http://localhost:3001"
         }
     }
 };

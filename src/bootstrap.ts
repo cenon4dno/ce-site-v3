@@ -4,6 +4,7 @@ import {bootstrap} from '@angular/platform-browser-dynamic';
 import {ELEMENT_PROBE_PROVIDERS} from '@angular/platform-browser';
 import {ROUTER_PROVIDERS} from '@angular/router-deprecated';
 import {HTTP_PROVIDERS} from '@angular/http';
+import {i18n} from './app/services/i18n/i18n';
 
 const ENV_PROVIDERS = [];
 // depending on the env mode, enable prod mode or add debugging modules
