@@ -136,3 +136,11 @@ It will start a local server using `webpack-dev-server` which will watch, build 
 ## Release Process
  * https://github.com/cenon4dno/ce-site-v3/releases cut a release
  * On server execute command `git checkout tags/x.x.x` or `git checkout x.x.x`
+ * Check if service is running `service v3-service status`. If not run it `sudo service v3-service start`
+
+
+ ## Validation
+  * Validate content http://content.cenonebora.com/
+  * Validate DB http://json-server.cenonebora.com/
+  * Validate http://v3-stage.cenonebora.com/ or http://v3.cenonebora.com/
+
