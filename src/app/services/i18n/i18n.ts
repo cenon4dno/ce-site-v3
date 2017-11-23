@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { Http, Response } from '@angular/http';
-import { Headers, RequestOptions } from '@angular/http';
 import { Observable } from 'rxjs';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/toPromise';
@@ -8,7 +7,6 @@ import 'rxjs/add/operator/toPromise';
 @Injectable()
 export class i18n {
   public lang: object = {};
-  private title: string = 'internationalization: Language files';
 
   constructor(private http: Http) {}
 
@@ -26,11 +24,6 @@ export class i18n {
     let body = res.json();
 
     return body;
-  }
-
-  private handleErrorObservable (error: Response | any) {
-	  console.error(error.message || error);
-  	return Observable.throw(error.message || error);
   }
 
   private handleErrorPromise (error: Response | any) {
