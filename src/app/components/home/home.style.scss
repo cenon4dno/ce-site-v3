@@ -1,0 +1,19 @@
+// Get variables
+@import "./src/style/_variables";
+
+* {
+  color: #FFEF00;
+}
+
+.resumeContainer {
+  padding: 0;
+  margin: 5px 0;
+  .row {
+    .col {
+      background-color: $white;
+      .title {
+        color: $orange;
+      }
+    }
+  }
+}

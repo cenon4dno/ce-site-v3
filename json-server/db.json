@@ -1,18 +1,67 @@
 {
-    "items": [{
-            "id": 3,
-            "name": "Item 3",
-            "description": "This is a lovely item"
-        },
-        {
-            "id": 5,
-            "name": "Item 2",
-            "description": "Item 2 description"
-        },
-        {
-            "name": "test",
-            "description": "test description",
-            "id": 6
+    "language": {
+        "contents": {
+            "home": {
+                "sections": [
+                    {
+                        "icon": "glyphicon-info-sign",
+                        "name": "About Me",
+                        "description": "This is a lovely item"
+                    },
+                    {
+                        "icon": "glyphicon-user",
+                        "name": "Contact",
+                        "description": "Item 2 description"
+                    },
+                    {
+                        "icon": "glyphicon-briefcase",
+                        "name": "Experience",
+                        "description": "Item 2 description"
+                    },
+                    {
+                        "icon": "glyphicon-book",
+                        "name": "Skills",
+                        "description": "test description",
+                        "id": 6
+                    },
+                    {
+                        "icon": "glyphicon-education",
+                        "name": "Education",
+                        "description": "test description",
+                        "id": 6
+                    },
+                    {
+                        "icon": "glyphicon-certificate",
+                        "name": "Certifications",
+                        "description": "test description",
+                        "id": 6
+                    },
+                    {
+                        "icon": "glyphicon-th-large",
+                        "name": "Projects",
+                        "description": "test description",
+                        "id": 6
+                    },
+                    {
+                        "icon": "glyphicon-road",
+                        "name": "Trainings",
+                        "description": "test description",
+                        "id": 6
+                    },
+                    {
+                        "icon": "glyphicon-globe",
+                        "name": "Languages",
+                        "description": "test description",
+                        "id": 6
+                    },
+                    {
+                        "icon": "glyphicon-knight",
+                        "name": "Hobbies",
+                        "description": "test description",
+                        "id": 6
+                    }
+                ]
+            }
         }
-    ]
+    }
 }

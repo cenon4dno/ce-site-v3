@@ -1,11 +1,17 @@
-// styles in src/style directory are applied to the whole page
+@import url('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css');
+@import "_variables";
 
 body {
-    background: #0147A7;
-    color: #fff;
+    background: $grey;
+    color: $black;
     margin: 0;
     padding: 0;
 }
 a {
-    color: #03A9F4;
+    color: $black;
 }
+
+.row {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }

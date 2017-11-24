@@ -3,6 +3,7 @@
 // Polyfills
 import 'es6-shim';
 import 'reflect-metadata';
+import 'jquery';
 require('zone.js/dist/zone');
 
 
@@ -17,3 +18,4 @@ import 'rxjs';
 
 // Other vendors for example jQuery, Lodash or Bootstrap
 // You can import js, ts, css, sass, ...
+import 'bootstrap/dist/js/bootstrap';
