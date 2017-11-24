@@ -1,6 +1,6 @@
 /// src/app/index.ts
-import {Component, OnInit} from '@angular/core';
-import {RouteConfig, ROUTER_PROVIDERS, ROUTER_DIRECTIVES} from '@angular/router-deprecated';
+import {Component} from '@angular/core';
+import {RouteConfig, ROUTER_DIRECTIVES} from '@angular/router-deprecated';
 import {FORM_PROVIDERS} from '@angular/common';
 import {i18n} from './services/i18n/i18n';
 import {Configuration} from './services/configuration/configuration';
@@ -27,12 +27,11 @@ export class App {
 
     constructor(public i18n: i18n, private configuration: Configuration) {
         this.configuration.getConfig()
-            .then((conf) => {
-                console.log('configuration', conf);
-            });
-        this.i18n.geti18nFile()
-            .then((lang) => {
-                this.lang = lang;
+            .then((config) => {
+                this.i18n.geti18nFile(config)
+                    .then((lang) => {
+                        this.lang = lang;
+                    });
             });
     }
 }

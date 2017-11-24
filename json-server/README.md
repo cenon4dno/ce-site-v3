@@ -3,6 +3,9 @@ You can update the env config files
 
 ## Installation 
 * Pre-installed on ng2-webpack generator
+* Install on server `json-server@^0.8.12`
+* Install on server `lodash@^4.12.0`
+
 
 ## Updated config
 * On package.json scripts added are env-config - set env config files to port 3001

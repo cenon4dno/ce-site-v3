@@ -15,6 +15,5 @@ export class About implements OnInit {
         // Do stuff
     }
 
-    ngOnInit() {
-    }
+    ngOnInit() {}
 }

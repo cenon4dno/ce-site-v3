@@ -7,11 +7,15 @@ import {DOCUMENT} from '@angular/platform-browser';
 @Injectable()
 export class Configuration {
   title: string = 'Environmental configurations';
+  env: string = 'prod';
 
-   constructor(private http: Http, private location: Location, @Inject(DOCUMENT) private document) {}
+   constructor(private http: Http, private location: Location, @Inject(DOCUMENT) private document) {
+    this.env = this.getEnv();
+   }
 
   getConfig(): Promise<any> {
     var $host = this.getHost();
+
     return this.http.get($host)
       .toPromise()
       .then(this.extractData)
@@ -19,14 +23,26 @@ export class Configuration {
   }
 
   private getHost() {
-    var $url = '';
-    if (window.location.host.indexOf('localhost') > -1) {
-      $url = 'http://localhost:3001/config';
+    var url = '';
+
+    if (this.env === 'dev') {
+      url = 'http://localhost:3001/config';
     } else {
-      $url = 'http://json-server.cenonebora.com/config';
+      url = 'http://json-server.cenonebora.com/config';
     }
 
-    return $url;
+    return url;
+  }
+
+  private getEnv() {
+    var env = 'prod';
+    if (window.location.host.indexOf('localhost') > -1) {
+      env = 'dev';
+    } else if (window.location.host.indexOf('stage') > -1) {
+      env = 'stage';
+    }
+
+    return env;
   }
 
   private extractData(res: Response) {

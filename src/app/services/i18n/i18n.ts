@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { Http, Response } from '@angular/http';
-import { Observable } from 'rxjs';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/toPromise';
 
@@ -10,8 +9,8 @@ export class i18n {
 
   constructor(private http: Http) {}
 
-  public geti18nFile(): Promise<any> {
-    return this.http.get('http://localhost:3002/language')
+  public geti18nFile(config): Promise<any> {
+    return this.http.get(config.api.cms + config.endpoints.content)
       .toPromise()
       .then(response => {
         this.lang = this.extractData(response);

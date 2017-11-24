@@ -1,17 +1,33 @@
 module.exports = {
+    "base": {
+        "config": {
+            "api": {
+                "cms": "xxx"
+            },
+            "endpoints": {
+                "content": '/language'
+            }
+        }
+    },
     "prod": {
         "config": {
-            "api": "http://v3.cenonebora.com"
+            "api": {
+                "cms": "http://content.cenonebora.com"
+            }
         }
     },
     "stage": {
         "config": {
-            "api": "http://v3-stage.cenonebora.com"
+            "api": {
+                "cms": "http://content.cenonebora.com"
+            }
         }
     },
     "dev": {
         "config": {
-            "api": "http://localhost:3001"
+            "api": {
+                "cms": "http://localhost:3002"
+            }
         }
     }
 };
