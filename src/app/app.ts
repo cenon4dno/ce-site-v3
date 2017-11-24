@@ -26,6 +26,7 @@ export class App {
     public lang: object = {};
 
     constructor(public i18n: i18n, private configuration: Configuration) {
+
         this.configuration.getConfig()
             .then((config) => {
                 this.i18n.geti18nFile(config)

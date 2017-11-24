@@ -207,7 +207,10 @@ module.exports = (function makeWebpackConfig() {
            jQuery: 'jquery',
            $: 'jquery',
            jquery: 'jquery'
-       })
+       }),
+       new webpack.ProvidePlugin({
+            _: 'lodash'
+        })
     ];
 
     if (!isTestEnv) {
