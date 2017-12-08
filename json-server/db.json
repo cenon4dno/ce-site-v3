@@ -1,63 +1,78 @@
 {
     "language": {
         "contents": {
+            "author": {
+                "fullname": "Cenon Dinno A. Ebora III",
+                "nickname": "Dino",
+                "bday": "11-16-1982",
+                "mobile": "(+63).917.819.7077",
+                "email": "cenon4dno@gmail.com"
+            },
             "home": {
                 "sections": [
                     {
-                        "icon": "glyphicon-info-sign",
                         "name": "About Me",
-                        "description": "This is a lovely item"
+                        "icon": "glyphicon-info-sign",
+                        "content": "I've been working as a web developer (professionally) since 2005 and lately been involve in mobile development using phonegap/cordova. I love challenges especially coding/scripting challenges - I really feel that I choose the right career. I love what I do and I do it with passion."
                     },
                     {
-                        "icon": "glyphicon-user",
                         "name": "Contact",
-                        "description": "Item 2 description"
+                        "icon": "glyphicon-user",
+                        "details": {
+                            "mobile": "(+63).917.819.7077",
+                            "email": "cenon4dno@gmail.com",
+                            "facebook": "https://www.facebook.com/cenon4dno",
+                            "gtalk": "@cenon4dno",
+                            "skype": "@cenon4dno",
+                            "twitter": "https://twitter.com/cenon4dno",
+                            "telegram": "@cenon4dno"
+                        }
                     },
                     {
-                        "icon": "glyphicon-briefcase",
                         "name": "Experience",
-                        "description": "Item 2 description"
+                        "icon": "glyphicon-briefcase",
+                        "content": "Item 2 content"
                     },
                     {
                         "icon": "glyphicon-book",
                         "name": "Skills",
-                        "description": "test description",
+                        "content": "test content",
                         "id": 6
                     },
                     {
                         "icon": "glyphicon-education",
                         "name": "Education",
-                        "description": "test description",
+                        "content": "test content",
                         "id": 6
                     },
                     {
                         "icon": "glyphicon-certificate",
                         "name": "Certifications",
-                        "description": "test description",
+                        "content": "test content",
                         "id": 6
                     },
                     {
                         "icon": "glyphicon-th-large",
                         "name": "Projects",
-                        "description": "test description",
+                        "content": "test content",
                         "id": 6
                     },
                     {
                         "icon": "glyphicon-road",
                         "name": "Trainings",
-                        "description": "test description",
+                        "content": "test content",
                         "id": 6
                     },
                     {
                         "icon": "glyphicon-globe",
                         "name": "Languages",
-                        "description": "test description",
+                        "content": "test content",
                         "id": 6
                     },
                     {
                         "icon": "glyphicon-knight",
                         "name": "Hobbies",
-                        "description": "test description",
+                        "content": "test content",
                         "id": 6
                     }
                 ]
