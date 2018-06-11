@@ -1,10 +1,10 @@
 <div class="resumeContainer">
   <div class="row" *ngIf="contents.sections">
     <div *ngFor="let section of contents.sections; trackBy: index;" class="col col-lg-5 col-lg-offset-1">
-      <h3 class="resume-section-header">
-        <span class="glyphicon {{section.icon}}" aria-hidden="true"></span>
-        <span class="title">{{section.name}}</span>
-      </h3>
+        <h3 class="resume-section-header">
+            <span class="glyphicon {{section.icon}}" aria-hidden="true"></span>
+            <span class="title">{{section.name}}</span>
+          </h3>
     </div>
   </div>
 </div>

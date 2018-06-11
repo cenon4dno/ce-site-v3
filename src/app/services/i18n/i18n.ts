@@ -10,6 +10,7 @@ export class i18n {
   constructor(private http: Http) {}
 
   public geti18nFile(config): Promise<any> {
+    console.log(config);
     return this.http.get(config.api.cms + config.endpoints.content)
       .toPromise()
       .then(response => {
@@ -25,7 +26,7 @@ export class i18n {
     return body;
   }
 
-  private handleErrorPromise (error: Response | any) {
+  private handleErrorPromise (error: Response | any): Promise<any> {
 	  console.error(error.message || error);
     return Promise.reject(error.message || error);
   }

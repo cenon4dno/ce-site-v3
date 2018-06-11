@@ -47,6 +47,7 @@
     "@angular/router-deprecated": "2.0.0-rc.2",
     "@ngrx/store": "^1.5.0",
     "@types/lodash": "^4.14.77",
+    "ce-site-common": "git+https://git@github.com:cenon4dno/ce-site-common.git#0.0.6",
     "bootstrap": "^3.3.7",
     "es6-shim": "^0.35.0",
     "es7-reflect-metadata": "1.6.0",
