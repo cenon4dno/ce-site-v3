@@ -24,6 +24,7 @@ export class Configuration {
 
   private getHost() {
     var url = '';
+    console.log(this.env);
 
     if (this.env === 'dev') {
       url = 'http://localhost:3001/config';
