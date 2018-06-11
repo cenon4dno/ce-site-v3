@@ -13,6 +13,9 @@ module.exports = {
         "config": {
             "api": {
                 "cms": "http://content.cenonebora.com"
+            },
+            "endpoints": {
+                "content": '/language'
             }
         }
     },
@@ -20,6 +23,9 @@ module.exports = {
         "config": {
             "api": {
                 "cms": "http://content.cenonebora.com"
+            },
+            "endpoints": {
+                "content": '/language'
             }
         }
     },
@@ -27,6 +33,9 @@ module.exports = {
         "config": {
             "api": {
                 "cms": "http://localhost:3002"
+            },
+            "endpoints": {
+                "content": '/language'
             }
         }
     }

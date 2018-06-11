@@ -138,6 +138,9 @@ It will start a local server using `webpack-dev-server` which will watch, build 
  * On server execute command `git checkout tags/x.x.x` or `git checkout x.x.x`
  * Check if service is running `service v3-service status`. If not run it `sudo service v3-service start`
 
+## Service Location
+ * Location of pre-created service is /etc/init/v3-service.conf 
+ * To start service is 'sudo service v3-service start'
 
  ## Validation
   * Validate content http://content.cenonebora.com/
