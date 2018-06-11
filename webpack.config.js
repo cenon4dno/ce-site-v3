@@ -344,6 +344,8 @@ module.exports = (function makeWebpackConfig() {
     config.devServer = {
         contentBase: './src/public',
         historyApiFallback: true,
+        hot: true,
+        inlin: true,
         stats: 'minimal' // none (or false), errors-only, minimal, normal (or true) and verbose
     };
 
