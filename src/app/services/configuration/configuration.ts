@@ -26,9 +26,7 @@ export class Configuration {
   private getHost() {
     var url = '';
 
-    //url = 'https://w7lvfg2asj.execute-api.us-east-1.amazonaws.com/dev/getApi/id/' + this.content;
-    //url = 'https://gqs9idgq3h.execute-api.us-west-2.amazonaws.com/ce-v3-api/config';
-    url = ' https://c5uzavkph4.execute-api.ap-southeast-1.amazonaws.com/dev/getConfig/id/' + this.content;
+    url = 'https://jjbxaqu2hd.execute-api.ap-southeast-1.amazonaws.com/dev/getConfig/id/' + this.content;
 
     return url;
   }
