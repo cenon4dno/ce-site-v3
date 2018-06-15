@@ -48,7 +48,6 @@
     "@ngrx/store": "^1.5.0",
     "@types/lodash": "^4.14.77",
     "bootstrap": "^3.3.7",
-    "ce-site-common": "git+https://git@github.com:cenon4dno/ce-site-common.git#0.0.6",
     "dotenv": "^6.0.0",
     "es6-shim": "^0.35.0",
     "es7-reflect-metadata": "1.6.0",

@@ -10,9 +10,7 @@ export class i18n {
   constructor(private http: Http) {}
 
   public geti18nFile(config): Promise<any> {
-    console.log('geti18nFile',  config);
-    console.log('geti18nFile config.api.cms + config.endpoints.content',  config.api.cms + config.endpoints.content);
-    return this.http.get(config.api.cms + config.endpoints.content)
+    return this.http.get(config.configUrl + config.configPath)
       .toPromise()
       .then(response => {
         console.log('geti18nFile response',  response);

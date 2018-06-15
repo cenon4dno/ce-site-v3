@@ -11,9 +11,9 @@ import {i18n} from 'app/services/i18n/i18n';
 })
 
 export class Home {
-  public contents: object;
+  public contents: string[];
 
   constructor(private langFile: i18n) {
-    this.contents = langFile.lang.contents.home;
+    this.contents = langFile.lang.configs;
   }
 }
