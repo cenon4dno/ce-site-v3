@@ -2,7 +2,7 @@
 @import "./src/style/_variables";
 
 * {
-  color: #FFEF00;
+  color: #000;
 }
 
 .resumeContainer {
@@ -11,6 +11,8 @@
   .row {
     .col {
       background-color: $white;
+      text-align: left;
+
     }
   }
 }

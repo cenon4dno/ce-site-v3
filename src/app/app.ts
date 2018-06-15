@@ -31,7 +31,7 @@ export class App {
             .then((config) => {
                 this.i18n.geti18nFile(config)
                     .then((lang) => {
-                        console.log('this.lang', this.lang);
+                        console.log('this.lang', lang);
                         this.lang = lang;
                     });
             });

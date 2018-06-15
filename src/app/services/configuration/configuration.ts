@@ -8,6 +8,7 @@ import {DOCUMENT} from '@angular/platform-browser';
 export class Configuration {
   title: string = 'Environmental configurations';
   env: string = 'prod';
+  content: string = '1';
 
    constructor(private http: Http, private location: Location, @Inject(DOCUMENT) private document) {
     this.env = this.getEnv();
@@ -24,13 +25,10 @@ export class Configuration {
 
   private getHost() {
     var url = '';
-    console.log('getHost', this.env);
 
-    if (this.env === 'dev') {
-      url = 'http://localhost:3001/config';
-    } else {
-      url = 'http://json-server.cenonebora.com/config';
-    }
+    //url = 'https://w7lvfg2asj.execute-api.us-east-1.amazonaws.com/dev/getApi/id/' + this.content;
+    //url = 'https://gqs9idgq3h.execute-api.us-west-2.amazonaws.com/ce-v3-api/config';
+    url = ' https://c5uzavkph4.execute-api.ap-southeast-1.amazonaws.com/dev/getConfig/id/' + this.content;
 
     return url;
   }
