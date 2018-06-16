@@ -4,6 +4,7 @@ import {RouteConfig, ROUTER_DIRECTIVES} from '@angular/router-deprecated';
 import {FORM_PROVIDERS} from '@angular/common';
 import {i18n} from './services/i18n/i18n';
 import {Configuration} from './services/configuration/configuration';
+import {Config} from './config/config';
 import routes from './app.routes';
 import '../style/app.scss';
 
@@ -13,7 +14,7 @@ import '../style/app.scss';
  */
 @Component({
     selector: 'app', // <app></app>
-    providers: [...FORM_PROVIDERS, i18n, Configuration],
+    providers: [...FORM_PROVIDERS, i18n, Configuration, Config],
     directives: [...ROUTER_DIRECTIVES],
     pipes: [],
     styles: [require('./app.style.scss')],
@@ -31,7 +32,6 @@ export class App {
             .then((config) => {
                 this.i18n.geti18nFile(config)
                     .then((lang) => {
-                        console.log('this.lang', lang);
                         this.lang = lang;
                     });
             });

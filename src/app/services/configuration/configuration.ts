@@ -1,8 +1,9 @@
-import {Injectable} from '@angular/core';
-import {Inject} from '@angular/core';
-import {Http, Response} from '@angular/http';
-import {Location} from '@angular/common';
-import {DOCUMENT} from '@angular/platform-browser';
+import { Injectable } from '@angular/core';
+import { Inject } from '@angular/core';
+import { Http, Response } from '@angular/http';
+import { Location } from '@angular/common';
+import { DOCUMENT } from '@angular/platform-browser';
+import { Config } from 'app/config/config';
 
 @Injectable()
 export class Configuration {
@@ -10,7 +11,11 @@ export class Configuration {
   env: string = 'prod';
   content: string = '1';
 
-   constructor(private http: Http, private location: Location, @Inject(DOCUMENT) private document) {
+   constructor(
+     private http: Http,
+     private location: Location,
+     private config: Config
+    ) {
     this.env = this.getEnv();
    }
 
@@ -24,11 +29,7 @@ export class Configuration {
   }
 
   private getHost() {
-    var url = '';
-
-    url = 'https://jjbxaqu2hd.execute-api.ap-southeast-1.amazonaws.com/dev/getConfig/id/' + this.content;
-
-    return url;
+    return this.config.getApiUrl();
   }
 
   private getEnv() {
@@ -48,7 +49,7 @@ export class Configuration {
   }
 
   private handleErrorPromise (error: Response | any) {
-	  console.error(error.message || error);
+    console.log(error);
     return Promise.reject(error.message || error);
   }
 }
