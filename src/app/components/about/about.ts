@@ -1,4 +1,5 @@
-import {Component, OnInit} from '@angular/core';
+import {Component} from '@angular/core';
+import {i18n} from 'app/services/i18n/i18n';
 
 @Component({
     selector: 'about',
@@ -9,11 +10,11 @@ import {Component, OnInit} from '@angular/core';
     pipes: []
 })
 
-export class About implements OnInit {
+export class About {
+    public contents: string[];
+    private page: string = 'about';
 
-    constructor() {
-        // Do stuff
+    constructor(private langFile: i18n) {
+        this.contents = langFile.getPageContent(this.page);
     }
-
-    ngOnInit() {}
 }
