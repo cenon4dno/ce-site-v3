@@ -1,9 +1,22 @@
 <div class="resumeContainer">
+    <div class="row rowFirst">
+      <div class="col col-xs-10 col-lg-offset-1">
+        <div id="photo-header" class="text-center">
+          <!-- PHOTO (AVATAR) -->
+          <div id="photo">
+            <img src="img/avatar.jpg" alt="avatar">
+          </div>
+          <div id="text-header">
+            <h1 [innerHTML]="greetings[0].content"></h1>
+          </div>
+        </div>
+      </div>
+    </div>
   <div class="row" *ngIf="contents">
     <div *ngFor="let section of contents; let i = index;" 
-      class="col col-lg-4" [ngClass]="{'col-lg-offset-2': i%2==0}">
+      class="col " [ngClass]="{'col-lg-offset-1': i%2==0, 'col-lg-6': i%2==0, 'col-lg-4': i%2!=0}">
         <h3 class="resume-section-header">
-            <span class="glyphicon {{section.icon}}" aria-hidden="true"></span>
+            <span class="icon glyphicon {{section.icon}}" aria-hidden="true"></span>
             <span class="title">{{section.title}}</span>
             <div class="content">{{section.content}}</div>
             <hello-world></hello-world>

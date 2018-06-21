@@ -19,12 +19,11 @@ header {
 }
 
 main {
-  padding: 1em;
+  padding: 0;
   font-family: Arial, Helvetica, sans-serif;
   text-align: center;
   margin-top: 50px;
-  flex: 1 0 auto;
-  background: $white;
+  flex: 1 0 auto;  
 }
 
 footer {

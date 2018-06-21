@@ -12,9 +12,13 @@ import {HelloWorld} from 'app/common/helloWorld/helloWorld';
 
 export class Home {
   public contents: string[];
+  public greetings: string[];
+  private header: string = 'greetings';
   private page: string = 'resume';
 
   constructor(private langFile: i18n) {
+    this.greetings = langFile.getPageContent(this.header);
+    console.log("GREETINGS " + JSON.stringify(this.greetings));
     this.contents = langFile.getPageContent(this.page);
     this.contents = this.sortingOfContents(this.contents);
   }

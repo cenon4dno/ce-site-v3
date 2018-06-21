@@ -2,7 +2,7 @@
 @import "./src/style/_variables";
 
 * {
-  color: #000;
+  color: $black;
 }
 
 .resumeContainer {
@@ -12,7 +12,38 @@
     .col {
       background-color: $white;
       text-align: left;
-
+      .icon, .title {
+        color: $orange;
+      }
+      #text-header {
+        h1 {
+          text-transform: uppercase;
+          font-size: 2em;
+          letter-spacing: -1px;
+          span {
+            color: $orange;
+          }
+          sup {
+            opacity: 0.5;
+          }
+          .greetings {
+            font-size: 18px;
+          }
+        }
+      }
+      #photo {
+        img {
+          width: 150px;
+          height: 150px;
+          border-radius: 50%;
+        }
+        margin: auto;
+        margin-top: -75px;
+        padding-top: 30px;
+        width: 160px;
+        height: 160px;
+        border-radius: 50%;
+       }
     }
   }
 }
