@@ -25,6 +25,8 @@ import '../style/app.scss';
 
 export class App {
     public lang: object = {};
+    public copyright: object = {};
+    private copyrightText: string = 'copyright';
 
     constructor(public i18n: i18n, private configuration: Configuration) {
 
@@ -33,6 +35,8 @@ export class App {
                 this.i18n.geti18nFile(config)
                     .then((lang) => {
                         this.lang = lang;
+                        this.copyright = this.i18n.getSectionContent(this.copyrightText);
+                        console.log(this.copyright);
                     });
             });
     }

@@ -14,7 +14,7 @@
     </div>
   <div class="row" *ngIf="contents">
     <div *ngFor="let section of contents; let i = index;" 
-      class="col " [ngClass]="{'col-lg-offset-1': i%2==0, 'col-lg-6': i%2==0, 'col-lg-4': i%2!=0}">
+      class="col " [ngClass]="{'col-lg-offset-1': i%2==0, 'col-lg-6 col-padding': i%2==0, 'col-lg-4': i%2!=0}">
         <h3 class="resume-section-header">
             <span class="icon glyphicon {{section.icon}}" aria-hidden="true"></span>
             <span class="title">{{section.title}}</span>

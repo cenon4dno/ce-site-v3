@@ -19,6 +19,17 @@ export class i18n {
     return arrContents;
   }
 
+  public getSectionContent(section) {
+    var arrContents = [];
+    if (this.lang.contents && this.lang.contents.length > 0) {
+      arrContents = this.lang.contents.filter(
+        content => content.section === section
+      );
+    }
+
+    return arrContents;
+  }
+
   public geti18nFile(config): Promise<any> {
     var langConfig = config.find(conf => conf.code === this.configType);
     return this.http.get(langConfig.configUrl + langConfig.configPath)

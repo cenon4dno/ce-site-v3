@@ -29,10 +29,15 @@ main {
 footer {
   text-align: center;
   font-size: 0.8em;
-  background-color: #2C102B;
+  background-color: $grey;
 }
 
 .shield {
   width: 750px;
   height: 450px;
+}
+
+.greetings {
+  font-size: 18px;
+  color: blue;
 }

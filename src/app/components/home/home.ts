@@ -17,8 +17,7 @@ export class Home {
   private page: string = 'resume';
 
   constructor(private langFile: i18n) {
-    this.greetings = langFile.getPageContent(this.header);
-    console.log("GREETINGS " + JSON.stringify(this.greetings));
+    this.greetings = langFile.getSectionContent(this.header);
     this.contents = langFile.getPageContent(this.page);
     this.contents = this.sortingOfContents(this.contents);
   }

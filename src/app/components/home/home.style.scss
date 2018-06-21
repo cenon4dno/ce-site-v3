@@ -15,7 +15,11 @@
       .icon, .title {
         color: $orange;
       }
+      &.col-padding {
+        padding-left: 30px;
+      }
       #text-header {
+        padding: 20px;
         h1 {
           text-transform: uppercase;
           font-size: 2em;
@@ -25,9 +29,6 @@
           }
           sup {
             opacity: 0.5;
-          }
-          .greetings {
-            font-size: 18px;
           }
         }
       }
