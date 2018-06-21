@@ -57,13 +57,14 @@ go to [http://localhost:2368](http://localhost:2368) in your browser.
 # Table of Contents
 
 * [Getting Started](#getting-started)
-    * [File Structure](#file-structure)
-    * [Dependencies](#dependencies)
-    * [Installing](#installing)
-    * [Running the app](#running-the-app)
-    * [Developing](#developing)
-    * [Testing](#testing)
-* [License](#license)
+* [File Structure](#file-structure)
+* [Dependencies](#dependencies)
+* [Installing](#installing)
+* [Running the app](#running-the-app)
+* [Developing](#developing)
+* [Testing](#testing)
+* [Stage Deployment]
+* [Obsolete Instructions]
 
 # Getting Started
 
@@ -132,18 +133,25 @@ It will start a local server using `webpack-dev-server` which will watch, build 
 * single run: `npm test`
 * live mode (TDD style): `npm run test-watch`
 
+## Stage Deployment
+  * Need to run `npm run build`
+  * After `git push` it should automatically deploy
+  * Current pipeline is setuped in https://app.buddy.works
 
 ## Release Process
  * https://github.com/cenon4dno/ce-site-v3/releases cut a release
- * On server execute command `git checkout tags/x.x.x` or `git checkout x.x.x`
- * Check if service is running `service v3-service status`. If not run it `sudo service v3-service start`
+ * On the Production pipeline select the release version
 
-## Service Location
+## Obsolete Instructions (Uses EC2)
+
+### Service Location
  * Location of pre-created service is /etc/init/v3-service.conf 
  * To start service is 'sudo service v3-service start'
 
- ## Validation
+ ### Validation
   * Validate content http://content.cenonebora.com/
   * Validate DB http://json-server.cenonebora.com/
   * Validate http://v3-stage.cenonebora.com/ or http://v3.cenonebora.com/
+
+
 
