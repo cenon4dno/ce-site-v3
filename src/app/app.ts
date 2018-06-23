@@ -36,7 +36,6 @@ export class App {
                     .then((lang) => {
                         this.lang = lang;
                         this.copyright = this.i18n.getSectionContent(this.copyrightText);
-                        console.log(this.copyright);
                     });
             });
     }

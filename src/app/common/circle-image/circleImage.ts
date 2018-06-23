@@ -8,7 +8,5 @@ import { Component, Input } from '@angular/core';
 
 export class CircleImage {
   @Input() image: string;
-  constructor() {
-      console.log('IMAGE' + this.image);
-  }
+  constructor() {}
 }

@@ -4,8 +4,21 @@
     <a [routerLink]="['About']">About</a>
   </nav>
 </header> -->
-<main>
-  <router-outlet *ngIf="lang.contents"></router-outlet>
+<div class="contain-animation" *ngIf="!lang.contents">
+    <div class="contain-circle">
+      <div class="circle">
+        <div class="percentage">
+         <span class="twenty">20%</span>
+         <span class="fourty">40%</span>
+         <span class="sixety">60%</span>
+          <span class="eighty">80%</span>
+          <span class="hundred">100%</span>
+       </div>
+      </div>
+    </div>
+  </div>
+<main *ngIf="lang.contents">
+  <router-outlet></router-outlet>
 </main>
 <footer *ngIf="copyright[0]">
   {{copyright[0].content}}
