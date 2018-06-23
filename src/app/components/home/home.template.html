@@ -3,12 +3,12 @@
       <div class="col col-xs-10 col-lg-offset-1">
         <div id="photo-header" class="text-center">
           <!-- PHOTO (AVATAR) -->
-          <div id="photo">
-            <img src="img/avatar.jpg" alt="avatar">
-          </div>
+          <circle-image image="img/avatar.jpg"></circle-image>
           <div id="text-header">
             <h1 [innerHTML]="greetings[0].content"></h1>
           </div>
+          <hr />
+          <hr />
         </div>
       </div>
     </div>
@@ -19,7 +19,6 @@
             <span class="icon glyphicon {{section.icon}}" aria-hidden="true"></span>
             <span class="title">{{section.title}}</span>
             <div class="content">{{section.content}}</div>
-            <hello-world></hello-world>
           </h3>
     </div>
   </div>

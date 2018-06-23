@@ -1,10 +1,10 @@
 import {Component} from '@angular/core';
 import {i18n} from 'app/services/i18n/i18n';
-import {HelloWorld} from 'app/common/helloWorld/helloWorld';
+import {CircleImage} from 'app/common/circle-image/circleImage';
 
 @Component({
   selector: 'home',
-  directives: [HelloWorld],
+  directives: [CircleImage],
   pipes: [],
   styles: [require('./home.style.scss')],
   template: require('./home.template.html')
@@ -18,8 +18,9 @@ export class Home {
 
   constructor(private langFile: i18n) {
     this.greetings = langFile.getSectionContent(this.header);
-    this.contents = langFile.getPageContent(this.page);
-    this.contents = this.sortingOfContents(this.contents);
+    this.contents = this.sortingOfContents(
+      langFile.getPageContent(this.page)
+    );
   }
 
   private sortingOfContents(contents) {
