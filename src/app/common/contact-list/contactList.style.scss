@@ -1,0 +1,24 @@
+// Get variables
+@import "./src/style/_variables";
+
+.contact-item {
+    display: block;
+    > div {
+        display: inline;
+    }
+    .icon {
+        background-color: $grey;
+    }
+    .title, .titleWithUrl {
+        padding-left: 10px;
+    }
+    .title::after,
+    .titleWithUrl::after {
+        content: "| ";
+        animation: blinker 1s linear infinite;
+    }
+    // Effects for blinking
+    @keyframes blinker {  
+        50% { opacity: 0; }
+    }
+}

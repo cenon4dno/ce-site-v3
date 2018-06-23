@@ -8,7 +8,9 @@
 .resumeContainer {
   padding: 0;
   margin: 5px 0;
-  .row {     
+  .row {   
+    background-color: $white;
+    margin: 0 80px !important;  
     .col {
       min-height: 150px;
       background-color: $white;
@@ -24,6 +26,7 @@
           margin: 5px 0;
           border-color: $grey;
         }
+        padding-bottom: 20px;
       }
       #text-header {
         padding: 20px 0 0;
@@ -48,38 +51,6 @@
       /* The typing effect */
       @keyframes type {
         from { width: 0 }
-      }
-
-      // Resume sections
-      .card {
-        font-family:  $font-face1;
-        .card-header {
-          .icon, .title {
-            color: $orange;
-            font-size: 16px;
-            font-weight: bold;
-          }
-        }
-        .card-body {
-          width: 90%;
-          .card-text::before {
-            content: "$ ";
-          }
-          .card-text::after {
-            content: "| ";
-            animation: blinker 1s linear infinite;
-          }
-          // Effects for blinking
-          @keyframes blinker {  
-            50% { opacity: 0; }
-          }
-    
-          .card-text {
-            padding-top: 20px;
-            font-size: 12px;
-            display: block;
-          }
-        }
       }
     }
   }

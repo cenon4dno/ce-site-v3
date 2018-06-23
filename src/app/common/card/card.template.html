@@ -1,0 +1,19 @@
+<div class="card" *ngIf="cardInfo">
+    <div class="card-header">
+        <span class="icon glyphicon {{cardInfo.icon}}" aria-hidden="true"></span>
+        <span class="title">{{cardInfo.title}}</span>
+    </div>
+    <div class="card-body" *ngIf="cardInfo.details">
+        <h5 class="card-title" *ngIf="cardInfo.details.title">
+            {{cardInfo.details.title}}
+        </h5>
+        <p class="card-text" *ngIf="cardInfo.details.text">
+            {{cardInfo.details.text}}
+        </p>
+        <div *ngIf="cardInfo.details.contacts">
+            <div *ngFor="let contact of cardInfo.details.contacts">
+                    <contact-list [contactInfo]="contact"></contact-list>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,10 +1,11 @@
 import {Component} from '@angular/core';
 import {i18n} from 'app/services/i18n/i18n';
 import {CircleImage} from 'app/common/circle-image/circleImage';
+import {Card} from 'app/common/card/card';
 
 @Component({
   selector: 'home',
-  directives: [CircleImage],
+  directives: [CircleImage, Card],
   pipes: [],
   styles: [require('./home.style.scss')],
   template: require('./home.template.html')

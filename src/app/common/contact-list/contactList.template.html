@@ -1,0 +1,16 @@
+<div class="contact-item">
+    <div *ngIf="contactInfo.icon" class="icon">
+        <span class="{{contactInfo.icon}}"></span>
+    </div>
+    <div *ngIf="!contactInfo.url" class="title">
+        {{contactInfo.name}}
+    </div>
+    <div *ngIf="contactInfo.url" class="titleWithUrl">
+        <a *ngIf="contactInfo.url" href="{{contactInfo.url}}" target="_blank">
+            {{contactInfo.name}}
+        </a>
+        <span *ngIf="contactInfo.name">
+            {{contactInfo.title}}
+        </span>
+    </div>
+</div>
