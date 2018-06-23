@@ -1,4 +1,4 @@
-<div class="resumeContainer">
+<div class="resumeContainer" *ngIf="contents">
     <div class="row rowFirst">
       <div class="col col-xs-10 col-lg-offset-1">
         <div id="photo-header" class="text-center">
@@ -12,18 +12,24 @@
         </div>
       </div>
     </div>
-  <div class="row row-eq-height" *ngIf="contents">
+  <div class="row row-eq-height">
     <div *ngFor="let section of contents; let i = index;" 
-      class="col {{section.section}}" [ngClass]="{'col-lg-offset-1': i%2==0, 'col-lg-6 col-padding': i%2==0, 'col-lg-4': i%2!=0}">
-        <h3 class="resume-section-header">
-            <span class="icon glyphicon {{section.icon}}" aria-hidden="true"></span>
-            <span class="title">{{section.title}}</span>
-            <div class="details">
-              <span class="texts" *ngIf="section.details">
-                {{section.details.text}}
-              </span>
-            </div>
-          </h3>
+      class="col {{section.section}}" 
+      [ngClass]="{'col-lg-offset-1': i%2==0, 'col-lg-6 col-padding': i%2==0, 'col-lg-4': i%2!=0}">
+      <div class="card" *ngIf="section">
+          <div class="card-header">
+              <span class="icon glyphicon {{section.icon}}" aria-hidden="true"></span>
+              <span class="title">{{section.title}}</span>
+          </div>
+          <div class="card-body" *ngIf="section.details">
+            <h5 class="card-title" *ngIf="section.details.title">
+                {{section.details.title}}
+            </h5>
+            <p class="card-text" *ngIf="section.details.text">
+              {{section.details.text}}
+            </p>
+          </div>
+        </div>
     </div>
   </div>
 </div>

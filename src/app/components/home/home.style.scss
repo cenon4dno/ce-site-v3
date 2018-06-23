@@ -18,7 +18,7 @@
       }
 
       //Resume header
-      #photo-header {        
+      #photo-header {      
         hr {
           padding: 0;
           margin: 5px 0;
@@ -27,6 +27,10 @@
       }
       #text-header {
         padding: 20px 0 0;
+        white-space: nowrap;
+        overflow: hidden;
+        width: 100%;
+        //animation: type 4s steps(60, end);
         h1 {
           text-transform: uppercase;
           font-size: 2em;
@@ -41,36 +45,41 @@
         }
       }
 
+      /* The typing effect */
+      @keyframes type {
+        from { width: 0 }
+      }
+
       // Resume sections
-      .icon, .title {
-        color: $orange;
-      }
-      .details::before {
-        content: "$ ";
-      }
-      .details {
-        padding-top: 20px;
-        font-size: 12px;
-        display: block;
-
-        // Effects for blinking
-        .texts::after {
-          content: "| ";
-          animation: blinker 1s linear infinite;
-        }
-        @keyframes blinker {  
-          50% { opacity: 0; }
-        }
-
-        .texts {
-          font-size: 12px;
-          animation: typing 3.5s steps(4, end) forwards;
-        }
-        /* The typing effect */
-          @keyframes typing {
-            from { width: 0 }
-            to { width: 100% }
+      .card {
+        font-family:  $font-face1;
+        .card-header {
+          .icon, .title {
+            color: $orange;
+            font-size: 16px;
+            font-weight: bold;
           }
+        }
+        .card-body {
+          width: 90%;
+          .card-text::before {
+            content: "$ ";
+          }
+          .card-text::after {
+            content: "| ";
+            animation: blinker 1s linear infinite;
+          }
+          // Effects for blinking
+          @keyframes blinker {  
+            50% { opacity: 0; }
+          }
+    
+          .card-text {
+            padding-top: 20px;
+            font-size: 12px;
+            display: block;
+          }
+        }
       }
     }
   }
